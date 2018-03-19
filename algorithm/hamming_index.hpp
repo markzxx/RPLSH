@@ -154,7 +154,6 @@ public:
 		projection_matrix = new float[codelen * dim];
 		generate_random_projection_matrix(dim, codelen, projection_matrix);
 		random_projection(data, points_num, dim, codelen, BaseCode);
-
 	}
 
 	void getNeighbors(size_t K, const Matrix<DataType>& query, float* query_){

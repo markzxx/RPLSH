@@ -21,7 +21,7 @@ find_package(OpenBLAS REQUIRED)
 include_directories(${OpenBLAS_INCLUDE_DIR})
 set(BLAS_LIB ${OpenBLAS_LIB})
 
-add_definitions (-std=c++11 -O3 -lboost -lcblas -march=native -Wall -DINFO)
+add_definitions (-std=c++11 -O3 -lboost -lopenblas -march=native -Wall -DINFO)
 add_executable(index samples/index.cc)
 add_executable(search samples/search.cc)
 #target_link_libraries(index ${PROJECT_NAME})
