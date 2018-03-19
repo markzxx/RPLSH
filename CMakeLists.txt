@@ -19,6 +19,7 @@ endif()
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/module)
 find_package(OpenBLAS REQUIRED)
 include_directories(${OpenBLAS_INCLUDE_DIR})
+include_directories(/opt/OpenBLAS/include)
 set(BLAS_LIB ${OpenBLAS_LIB})
 
 add_definitions (-std=c++11 -O3 -lboost -lopenblas -march=native -Wall -DINFO)
