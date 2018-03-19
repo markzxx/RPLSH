@@ -25,8 +25,8 @@ set(BLAS_LIB ${OpenBLAS_LIB})
 add_definitions (-std=c++11 -O3 -lboost -lopenblas -march=native -Wall -DINFO)
 add_executable(index samples/index.cc)
 add_executable(search samples/search.cc)
-#target_link_libraries(index ${PROJECT_NAME})
-#target_link_libraries(search ${PROJECT_NAME})
+target_link_libraries(index -lopenblas)
+target_link_libraries(search -lopenblas)
 #
 #file(GLOB_RECURSE CPP_SOURCES *.cc)
 #
